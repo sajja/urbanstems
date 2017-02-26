@@ -51,6 +51,21 @@
                 }
             });
         });
+        //Scrolling header
+        $(document).ready(function () {
+            // check where the shoppingcart-div is  
+            var offset = $('#headerBar').offset();
+            $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();
+                // check the visible top of the browser     
+                if (offset.top + 700 < scrollTop) {
+                    $('#headerBar').addClass('fixed');
+                }
+                else {
+                    $('#headerBar').removeClass('fixed');
+                }
+            });
+        });
     </script>
     <style>
     /* jssor slider bullet navigator skin 05 css */
@@ -154,21 +169,14 @@
             opacity: .3;
             pointer-events: none;
         }
-        
-        .fixdLogoBaner {
-            width: 100%;
-            background-color: black;
-            opacity: 0.7;
-        }
-        
-        .logoFixed {
-            height: 40px;
-            width: 100%;
-            padding-left: 10px;
-            padding-top: 5px;
-            padding-bottom: 44px;
-            background-color: black;
-        }
+    }
+    .logoFixed {
+        height: 40px;
+        width: 100%;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 44px;
+        background-color: black;
     }
     .scroll_image {
         max-width: 30px;
@@ -220,6 +228,16 @@
         background: black !important;
         font-size: 20px;
     }
+    #menuBar {
+        text-align: right;
+        width: 100%;
+    }
+    .fixed {
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        opacity: 0.5;
+    }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
     <link rel="stylesheet" href="css/products.css" />
@@ -229,11 +247,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <body style="padding:0px; margin:0px; background-color:lightgray;font-family:'Open Sans',sans-serif,arial,helvetica,verdana">
-    <div style="display:flex;background-color:black;vertical-align: middle;">
-        <div id="navBar" class="logoFont logoFixed" style="font-family:'pl'">Urban Stems</div>
-        <div style="color:white;margin:5px;" class="hvr-shutter-out-horizontal"><a href="#products">Producst</a></div>
-        <div style="color:white;margin:5px;" class="hvr-shutter-out-horizontal"><a href="#services">Services</a></div>
-        <div style="color:white;margin:5px;" class="hvr-shutter-out-horizontal"><a href="#contact">Contact</a></div>
+    <div id="headerBar" style="display:flex;background-color:black;">
+        <div id="logo" class="logoFont logoFixed" style="width:80%;font-family:'pl';float:left">Urban Stems</div>
+        <div style="width:50%;">
+            <div style="color:white;margin:5px;float:right" class="hvr-shutter-out-horizontal"><a href="#products">Producst</a></div>
+            <div style="color:white;margin:5px;float:right" class="hvr-shutter-out-horizontal"><a href="#services">Services</a></div>
+            <div style="color:white;margin:5px;float:right" class="hvr-shutter-out-horizontal"><a href="#contact">Contact</a></div>
+        </div>
     </div>
     <!-- #region Jssor Slider Begin -->
     <!-- Generator: Jssor Slider Maker -->
@@ -384,41 +404,49 @@
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:570px;overflow:hidden;">
-            <div> <img data-u="image" src="img/wedding.jpeg" /> </div>
-            <div> <img data-u="image" src="img/arrangements1.jpeg" /> </div>
-            <div> <img data-u="image" src="img/bunch2.jpg" /> </div> <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a> </div>
+            <div> <img data-u="image" src="img/bunch2.jpg" />
+                <div style="position:absolute;top:30px;left:60%;width:480px;height:120px;z-index:0;font-size:40px;color:#ff66b3;line-height:60px;text-align:center;font-family: 'Parisienne', cursive;font-size:70px">Make your wedding day special</div>
+            </div>
+            <div> <img data-u="image" src="img/rose_bucket2.jpg" />
+                <div style="position:absolute;top:30px;left:60%;width:480px;height:120px;z-index:0;font-size:40px;color:#000000;line-height:60px;text-align:center;font-family: 'Parisienne', cursive;font-size:70px">A perfect gift for a loved one</div>
+            </div>
+            <div> <img data-u="image" src="img/classy.jpg" />
+                <div style="position:absolute;top:30px;left:60%;width:480px;height:120px;z-index:0;font-size:40px;color:#000000;line-height:60px;text-align:center;font-family: 'Parisienne', cursive;font-size:70px">Classy, but affordable</div>
+            </div> <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a> </div>
         <!-- Arrow Navigator --><span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span> <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span> </div>
     <div style="margin-top:-20px;z-index: 999999;height:30px;position: absolute;width:100%">
         <a href="#products"> <img src="img/scroll_down.png" style="z-index:400;height: auto;width: auto;max-width: 30px;max-height: 30px;margin-left: auto;margin-right: auto;display: block;" align="middle" /></a>
     </div>
     <!-- #endregion Jssor Slider End -->
     <div id="services">
-        <div class="container " style="display:grid; margin-top:20px; ">
-            <div style="margin-top:auto;text-align: center;font-family: 'Parisienne', cursive;font-size:70px ">Ordering flowers with real easy
-                <hr width="20% " /> </div>
-            <div style="max-width:260px " class="col-md-6 view view-first ">Select flowers<img src="img/x1.jpg " />
-                <div class="mask ">
-                    <h2>Choose from wide collection of designs</h2>
-                    <p>sdasdfj df asfd afa sf asf </p> <a href="# " class="info ">Designs</a> </div>
-            </div>
-            <div style="max-width:260px " class="col-md-6 view view-first "> Weddings and events<img src="img/x2.jpeg " />
-                <div class="mask ">
-                    <h2>We have lot of themes</h2>
-                    <p>Come visit us, choose form hundreads of themes and settins</p> <a href="# " class="info ">Read more</a> </div>
-            </div>
-            <div style="max-width:260px " class="col-md-6 view view-first "> House plants<img src="img/plants.jpg " />
-                <div class="mask ">
-                    <h2>We love'em</h2>
-                    <p>xnldfjs sdf asfd asf af </p> <a href="# " class="info ">Read more</a> </div>
-            </div>
-            <div style="max-width:260px " class="col-md-6 view view-first ">Cash on delivery<img src="img/x3.jpg " />
-                <div class="mask ">
-                    <h2>We do express delivery</h2>
-                    <p>xnldfjs sdf asfd asf af </p> <a href="# " class="info ">Read more</a> </div>
+        <div class="container-fluid" style="display:grid; margin-top:20px;">
+            <div class="row">
+                <div style="margin-top:auto;text-align: center;font-family: 'Parisienne', cursive;font-size:70px ">Ordering flowers with real easy
+                    <hr width="20%" /> </div>
+                <div style="max-width:400px " class="col-lg-6 view view-first ">Select flowers<img src="img/x1.jpg " />
+                    <div class="mask ">
+                        <h2>Choose from wide collection of designs</h2>
+                        <p>sdasdfj df asfd afa sf asf </p> <a href="# " class="info ">Designs</a> </div>
+                </div>
+                <div style="max-width:400px " class="col-lg-6 view view-first "> Weddings and events<img src="img/x2.jpeg " />
+                    <div class="mask ">
+                        <h2>We have lot of themes</h2>
+                        <p>Come visit us, choose form hundreads of themes and settins</p> <a href="# " class="info ">Read more</a> </div>
+                </div>
+                <div style="max-width:400px " class="col-lg-6 view view-first "> House plants<img src="img/plants.jpg " />
+                    <div class="mask ">
+                        <h2>We love'em</h2>
+                        <p>xnldfjs sdf asfd asf af </p> <a href="# " class="info ">Read more</a> </div>
+                </div>
+                <div style="max-width:400px " class="col-lg-6 view view-first ">Cash on delivery<img src="img/x3.jpg " />
+                    <div class="mask ">
+                        <h2>We do express delivery</h2>
+                        <p>xnldfjs sdf asfd asf af </p> <a href="# " class="info ">Read more</a> </div>
+                </div>
             </div>
         </div>
     </div>
-    <div id="products" class="container ">
+    <div id="products" class="container">
         <div style="margin-top:auto;text-align: center;font-family: 'Parisienne', cursive;font-size:70px "> Our designs
             <hr width="20% " /> </div>
         <div style="display:grid; margin-top:20px;margin-bottom:20px; ">
