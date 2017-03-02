@@ -191,9 +191,9 @@
         margin-top: 50px;
     }
     #products {
-        background-color: lightcyan;
+        background-color: #eaeaea;
         width: 100%;
-        margin-top: 20px;
+        /*        margin-top: 40px;*/
     }
     #about {
         background-color: azure;
@@ -202,11 +202,10 @@
         height: 600px;
     }
     #services {
-        background-color: lightyellow;
+        background-color: aliceblue;
         width: 100%;
         /*        height: 500px;*/
-        
-        margin-top: 10px;
+        /*        margin-top: 10px;*/
     }
     .container-table {
         display: table;
@@ -483,7 +482,7 @@
         
         .close {
             position: absolute;
-            top: 45px;
+            top: 65px;
             right: 35px;
             color: #f1f1f1;
             font-size: 40px;
@@ -507,13 +506,13 @@
         
         .test {}
     </style>
-    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:600px;overflow:hidden;visibility:hidden;">
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:620px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:600px;overflow:hidden;">
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:620px;overflow:hidden;">
             <div> <img data-u="image" src="img/bunch2.jpg" />
                 <div style="position:absolute;top:30px;left:60%;width:480px;height:120px;z-index:0;font-size:40px;color:#ff66b3;line-height:60px;text-align:center;font-family: 'Parisienne', cursive;font-size:70px">Make your wedding day special</div>
             </div>
@@ -525,13 +524,14 @@
             </div> <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a> </div>
         <!-- Arrow Navigator --><span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span> <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span> </div>
     <div style="margin-top:-20px;z-index: 999999;height:30px;position: absolute;width:100%">
-        <a href="#products"> <img src="img/scroll_down.png" style="z-index:400;height: auto;width: auto;max-width: 30px;max-height: 30px;margin-left: auto;margin-right: auto;display: block;" align="middle" /></a>
+        <a href="#productScroll"> <img src="img/scroll_down.png" style="z-index:400;height: auto;width: auto;max-width: 30px;max-height: 30px;margin-left: auto;margin-right: auto;display: block;" align="middle" /></a>
     </div>
     <!-- #endregion Jssor Slider End -->
     <div id="services">
+        <div id="servicesScroll">&nbsp;</div>
         <div class="container-fluid">
             <div class="row">
-                <div style="margin-top:auto;text-align: center;font-family: 'Parisienne', cursive;font-size:70px ">Ordering flowers with real easy
+                <div style="margin-top:40px;text-align: center;font-family: 'Parisienne', cursive;font-size:70px ">Ordering flowers with real easy
                     <hr width="20%" /> </div>
                 <div style="max-width:400px " class="col-lg-6 view view-first ">Select flowers<img src="img/x1.jpg " style="align:center" />
                     <div class="mask ">
@@ -557,40 +557,116 @@
         </div>
     </div>
     <div id="products">
-        <div style="margin-top:100px;text-align: center;font-family: 'Parisienne', cursive;font-size:70px "> Our products
+        <div id="productScroll" style=""> &nbsp;</div>
+        <div style="text-align: center;font-family: 'Parisienne', cursive;font-size:70px;margin-top:40px;"> Our products
             <hr width="20% " /> </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-lg-3">
-                    <div class="test"> <img id="myImg" src="img/products/orc1.png" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px">
-                        <p>skuofiasldasf sdmnasdfa df afd asfd asf das fdas fdas d asdf dsf da sfdaf s asdfd asf asdf asd f asdf fads</p>
-                        <div id="myModal" class="modal">
-                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/products/p1.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center;font-size:1em">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
                             <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
                             <!-- Modal Caption (Image Text) -->
                             <div id="caption"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-3">
-                    <div class="test"> <img id="myImg" src="img/products/orc2.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px">
-                        <p>skuofiasldasf sdmnasdfa df afd asfd asf das fdas fdas d asdf dsf da sfdaf s asdfd asf asdf asd f asdf fads</p>
-                        <div id="myModal" class="modal">
-                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/products/p2.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
                             <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
                             <!-- Modal Caption (Image Text) -->
                             <div id="caption"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-3"> <img id="myImg" src="img/products/orc1.png" alt="Trolltunga, Norway" width="300"></div>
-                <div class="col-md-4 col-lg-3"> <img id="myImg" src="img/products/orc1.png" alt="Trolltunga, Norway" width="300"></div>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/products/p3.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/products/p4.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/products/p5.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/products/p6.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/products/p7.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script>
             $('.test').on({
-                mousemove: function (e) {}
-                , mousedown: function () {
+                mousedown: function () {
                     var modalDiv = this.getElementsByTagName('div')[0];
                     var img = this.getElementsByTagName('img')[0];
                     var modalImg = modalDiv.getElementsByTagName('img')[0];
@@ -600,59 +676,81 @@
                 , mouseleave: function () {}
             });
         </script>
-        <script>
-            //            $('#myImg').on(mouseenter: function () {
-            //                alert('xxxx')
-            //                         })
-            // var modal = document.getElementById('myModal'); // // Get the image and insert it inside the modal - use its "alt" text as a caption // var img = document.getElementById('myImg'); // var modalImg = document.getElementById("img01"); // var captionText = document.getElementById("caption"); // img.onclick = function () { // modal.style.display = "block"; // modalImg.src = this.src; // captionText.innerHTML = this.alt; // } // var span = document.getElementsByClassName("close")[0]; // span.onclick = function () { // modal.style.display = "none"; // }
-        </script>
     </div>
-    <div id="events" class="container ">
-        <div style="margin-top:auto;text-align: center;font-family: 'Parisienne', cursive;font-size:70px "> Weddings and cooperate events
+    <div id="events">
+        <div style="margin-top:auto;text-align: center;font-family: 'Parisienne', cursive;font-size:70px ">Weddings and coporate events
             <hr width="20% " /> </div>
-        <div style="display:grid; margin-top:20px;margin-bottom:200px; ">
-            <div class="view view-first ">tag line <img src="img/products/orc1.png " />
-                <div class="mask ">
-                    <h2>xxx</h2>
-                    <p>Your Text</p> <a href="# " class="info ">Read More</a> </div>
-            </div>
-            <div class="view view-first "> <img src="img/products/orc2.jpg " />
-                <div class="mask ">
-                    <h2>yyyyy</h2>
-                    <p>Your Text</p> <a href="# " class="info ">Read Mor1111e</a> </div>
-            </div>
-            <div class="view view-first "> <img src="img/products/wow.jpg " />
-                <div class="mask ">
-                    <h2>yyyyy</h2>
-                    <p>Your Text</p> <a href="# " class="info ">Read Mor1111e</a> </div>
-            </div>
-        </div>
+        <div style="background-image: url('img/a1.jpg');height:200px;background-size: contain;"></div>
+        <div style="background-image: url('img/a2.jpg');height:200px;background-size: contain;"></div>
     </div>
-    <div id="plants " class="container ">
+    <div id="plants">
         <div style="margin-top:auto;text-align: center;font-family: 'Parisienne', cursive;font-size:70px "> House plants
             <hr width="20% " /> </div>
-        <div style="display:grid; margin-top:20px;margin-bottom:200px; ">
-            <div class="view view-first ">tag line <img src="img/products/orc1.png " />
-                <div class="mask ">
-                    <h2>xxx</h2>
-                    <p>Your Text</p> <a href="# " class="info ">Read More</a> </div>
-            </div>
-            <div class="view view-first "> <img src="img/products/orc2.jpg " />
-                <div class="mask ">
-                    <h2>yyyyy</h2>
-                    <p>Your Text</p> <a href="# " class="info ">Read Mor1111e</a> </div>
-            </div>
-            <div class="view view-first "> <img src="img/products/wow.jpg " />
-                <div class="mask ">
-                    <h2>yyyyy</h2>
-                    <p>Your Text</p> <a href="# " class="info ">Read Mor1111e</a> </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/plants/p1.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center;font-size:1em">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/plants/p2.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/plants/p3.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3" style="min-width:360px;margin-bottom:20px">
+                    <div class="test" style="background-color:lightgray;padding:15px;width:400px;">
+                        <div style="text-align:center;font-size:2em"> This is our best product</div>
+                        <div style="margin-bottom:10px;"><img id="myImg" src="img/plants/p4.jpg" alt="Trolltunga, dddd dsfnsafasf<br/>sdasdf" style="width:300px;display: block;margin: 0 auto;"></div>
+                        <p style="text-align:center">I will try to discribe this product better but not so much. u need to buy and see. It is really good.. so the people say.. but i dont know</p>
+                        <p style="text-align:center">Price: 1000 LKR</p>
+                        <div id="myModal1" class="modal">
+                            <!-- The Close Button --><span class="close" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+                            <!-- Modal Content (The Image) --><img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div id="about ">
+        <div></div>
         <div style="margin-top:auto;text-align: center;font-family: 'Parisienne', cursive;font-size:70px "> Call us now 12983 123 123 12 3
             <hr width="20% " /> </div>
-        <div style="float:left">xxxx</div>
         <div style="float:right">
             <div id="map"></div>
             <script>
