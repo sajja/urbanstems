@@ -1,0 +1,423 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+<link rel="stylesheet" href="css/hover-min.css" />
+<style>
+    body {
+        background-color: #fff9f8;
+    }
+    
+    #mainSection {
+        /*        min-height: 300px;*/
+    }
+    
+    #contact {
+        height: 300px;
+        /*        background-color: azure;*/
+    }
+    
+    #topBar {
+        height: 70px;
+        background: #ffc0b6;
+        /*        padding-top: 15px;*/
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#ffc0b6 10%, #fff9f8);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#ffc0b6 10%, #fff9f8);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#ffc0b6 10%, #fff9f8);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#ffc0b6 10%, #fff9f8);
+        /* Standard syntax (must be last) */
+    }
+    
+    #intro {
+        height: 300px;
+        background-color: #ffe4e1;
+        background: red;
+        /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#fff9f8 10%, #ffe4e1 50%, #fff9f8 10%);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#fff9f8, #ffe4e1, #fff9f8);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#fff9f8 10%, #ffe4e1 50%, #fff9f8 10%);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#fff9f8, #ffe4e1, #fff9f8);
+        /* Standard syntax (must be last) */
+    }
+    
+    #footer {
+        height: 70px;
+        background: #ffc0b6;
+        padding-top: 15px;
+        /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#fff9f8 10%, #ffc0b6);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#fff9f8, #ffc0b6);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#fff9f8 10%, #ffc0b6);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#fff9f8, #ffc0b6);
+        /* Standard syntax (must be last) */
+    }
+    
+    @font-face {
+        font-family: pl;
+        src: url("fonts/Playlist.otf") format("opentype");
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        padding: 0;
+        width: 20%;
+    }
+    
+    .social {
+        width: 40px;
+        height: 40px;
+        padding: 2px;
+    }
+</style>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        var jssor_1_options = {
+            $AutoPlay: true
+            , $SlideDuration: 800
+            , $SlideEasing: $Jease$.$OutQuint
+            , $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+            }
+            , $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+            }
+        };
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+        /*responsive code begin*/
+        /*you can remove responsive code if you don't want the slider scales while window resizing*/
+        function ScaleSlider() {
+            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+            if (refSize) {
+                refSize = Math.min(refSize, 1920);
+                jssor_1_slider.$ScaleWidth(refSize);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 30);
+            }
+        }
+        ScaleSlider();
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        /*responsive code end*/
+    });
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        });
+    });
+    //Scrolling header
+    $(document).ready(function () {
+        // check where the shoppingcart-div is  
+        var offset = $('#topBar').offset();
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            // check the visible top of the browser     
+            if (offset.top + 700 < scrollTop) {
+                $('#topBar').addClass('fixed');
+            }
+            else {
+                $('#topBar').removeClass('fixed');
+            }
+        });
+    });
+</script>
+<style>
+/* jssor slider bullet navigator skin 05 css */
+    /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+    
+    .jssorb05 {
+        position: absolute;
+    }
+    
+    .jssorb05 div,
+    .jssorb05 div:hover,
+    .jssorb05 .av {
+        position: absolute;
+        /* size of bullet elment */
+        width: 16px;
+        height: 16px;
+        background: url('img/b05.png') no-repeat;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    .jssorb05 div {
+        background-position: -7px -7px;
+    }
+    
+    .jssorb05 div:hover,
+    .jssorb05 .av:hover {
+        background-position: -37px -7px;
+    }
+    
+    .jssorb05 .av {
+        background-position: -67px -7px;
+    }
+    
+    .jssorb05 .dn,
+    .jssorb05 .dn:hover {
+        background-position: -97px -7px;
+    }
+    /* jssor slider arrow navigator skin 22 css */
+    /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        .jssora22l.jssora22lds      (disabled)
+        .jssora22r.jssora22rds      (disabled)
+        */
+    
+    .jssora22l,
+    .jssora22r {
+        display: block;
+        position: absolute;
+        /* size of arrow element */
+        width: 40px;
+        height: 58px;
+        cursor: pointer;
+        background: url('img/a22.png') center center no-repeat;
+        overflow: hidden;
+    }
+    
+    .jssora22l {
+        background-position: -10px -31px;
+    }
+    
+    .jssora22r {
+        background-position: -70px -31px;
+    }
+    
+    .jssora22l:hover {
+        background-position: -130px -31px;
+    }
+    
+    .jssora22r:hover {
+        background-position: -190px -31px;
+    }
+    
+    .jssora22l.jssora22ldn {
+        background-position: -250px -31px;
+    }
+    
+    .jssora22r.jssora22rdn {
+        background-position: -310px -31px;
+    }
+    
+    .jssora22l.jssora22lds {
+        background-position: -10px -31px;
+        opacity: .3;
+        pointer-events: none;
+    }
+    
+    .jssora22r.jssora22rds {
+        background-position: -70px -31px;
+        opacity: .3;
+        pointer-events: none;
+    }
+}
+.logoFixed {
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 44px;
+    background-color: black;
+}
+.scroll_image {
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    opacity: 0.5;
+}
+p {
+    font-size: 20px;
+}
+</style>
+
+<body>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-22.2.10.mini.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            var jssor_1_options = {
+                $AutoPlay: true
+                , $SlideDuration: 800
+                , $SlideEasing: $Jease$.$OutQuint
+                , $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                }
+                , $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                }
+            };
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script>
+    <div id="topBar">
+        <div style="font-family: 'pl', cursive;font-size:50px;float:left">Urban Stems</div>
+        <div style="width:50%;float:right;font-size:22px;padding-right:10px;">
+            <div style="color:white;margin:5px;float:right;background:inherit" class="hvr-shutter-out-horizontal"><a href="#footer">Contact</a></div>
+            <div style="color:white;margin:5px;float:right;background:inherit" class="hvr-shutter-out-horizontal"><a href="#home">Designs</a></div>
+            <div style="color:white;margin:5px;float:right;background:inherit" class="hvr-shutter-out-horizontal"><a href="#mainSection">Home</a></div>
+        </div>
+    </div>
+    <div id="mainSection">
+        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+            </div>
+            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+                <div> <img data-u="image" src="img/events.jpeg" /> </div>
+                <div> <img data-u="image" src="img/classy.jpg" /> </div>
+                <div> <img data-u="image" src="img/bunch2.jpg" /> </div>
+            </div>
+            <!-- Arrow Navigator --><span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span> <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span> </div>
+    </div>
+    <div id="intro">
+        <div style="margin:auto;text-align:center">
+            <h1 style="font-family: 'Parisienne', cursive;font-size:70px ">About Urban Stems</h1>
+            <hr>
+            <p style="font-size:20px"> We at Urban Stems believe that the best way to say it is with flowers!
+                <br/>We work hard and have fun, meeting interesting people and most importantly get to be creative through interesting briefs, beautiful venues, fantastic clients and of course wonderful, colorful flowers The concept at Urban Stems is simple. We will provide strong design with high quality flowers, delivered and managed with exceptional service.
+                <br> Allow us to bring this world to life for you. </p>
+        </div>
+    </div>
+    <div id="home">
+        <div class="container-fluid" style="background-color: #fff9f8;">
+            <div class="row">
+                <div class="col-lg-12" style="background-color:white;   position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p01.jpg" style="width:100%">
+                    <div style="position: absolute;top: 10%; left:60%;">
+                        <h2 style="font-family: 'Parisienne', cursive;font-size:70px ">Flower arrangements</h2>
+                        <p style="padding-top:20px;padding-right:5px;width:90%">Enhancing the beauty of flowers with artistic arrangement is the art of flower arrangements. Flower arrangements are an important part of the ambiance on any occasion, weddings, birthdays, parties or any other events in life. </p>
+                    </div>
+                </div>
+                <div class="col-lg-12" style="background-color:white;   position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p02.jpg" style="width:100%">
+                    <div style="position: absolute;top: 10%; left:10%;">
+                        <h2 style="font-family: 'Parisienne', cursive;font-size:70px ">Weddings</h2>
+                        <p style="padding-top:20px;;width:30%"> Each bride has a vision for her wedding day. Our mission is to ensure that vision be perfectly manifested. Surround your guest in a floral wonderland with beautiful centerpieces and decorations by offering fresh or silk flowers to add something special for any celebration. We offer unique packages to match your personality and budget </p>
+                    </div>
+                </div>
+                <div class="col-lg-12" style="background-color:white;   position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p03.jpg" style="width:100%">
+                    <div style="position: absolute;top: 10%; left:10%;color:white">
+                        <h2 style="font-family: 'Parisienne', cursive;font-size:70px ">Parties and event flowers</h2>
+                        <p style="padding-top:20px;width:30%"> We decorate great events and parties, large and small. We are renowned for our attention to detail, personal approach, can do attitude and calm manner </p>
+                    </div>
+                </div>
+                <div class="col-lg-12" style="background-color:white;   position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p05.jpg" style="width:100%">
+                    <div style="position: absolute;top: 10%; left:10%;color:#2a4411">
+                        <h2 style="font-family: 'Parisienne', cursive;font-size:70px ">Houseplants</h2>
+                        <p style="padding-top:20px;;width:30%">Houseplants make a beautiful, and inexpensive, decorative accent, adding color and warmth to virtually any room in your home or apartment. Either you are an expert or a forgetful gardner you can you'll love our collection of great indoor plants that will suite you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8" style="background-color:white;position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/contact.jpg" style="width:100%;opacity:0.3">
+                    <div style="position: absolute;top: 20%; left:50%;">
+                        <h2>Call us on our flower line &nbsp;<i>077 737 0010</i></h2>
+                        <p style="padding-top:20px;width:100%;text-align:center">Visit us at 216C, Gall Road, Rathmalana </p>
+                        <p style="padding-top:20px;width:100%;text-align:center">We are open 8Am-7PM (Mon-Sat)</p>
+                    </div>
+                </div>
+                <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+                <script>
+                    var map;
+                    var geocoder;
+                    var mapOptions = {
+                        center: new google.maps.LatLng(0.0, 0.0)
+                        , zoom: 2
+                        , mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+
+                    function initialize() {
+                        var myLatLng = {
+                            lat: 6.8244237
+                            , lng: 79.8700422
+                        };
+                        var myOptions = {
+                            center: new google.maps.LatLng(6.824429, 79.8678535)
+                            , zoom: 15
+                            , mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                        var marker = new google.maps.Marker({
+                            position: myLatLng
+                            , map: map
+                            , title: 'Hello World!'
+                        });
+                    }
+                    //This will render map on load
+                    google.maps.event.addDomListener(window, 'load', initialize);
+                </script>
+                <div class="col-lg-4">
+                    <div id="map_canvas" style="background-color:white;  height:53%; position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" style="padding-left:10px;padding-right:10px;">
+        <div style="float:left;"> <img class="social" src="img/phone.png">077 737 0010<img src="img/address.png" class="social">216C, Gall Road, Rathmalana <img class="social" src=img/email.png>amanjanee@urbanstems.lk</div>
+        <div style="float:right"> <img class="social" src="img/whatsapp.png"> <img class="social" src="img/facebook.svg"> <img class="social" src="img/instagram.png"> <img class="social" src="img/viber.png"> </div>
+    </div>
+</body>
+
+</html>
