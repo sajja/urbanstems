@@ -1,0 +1,82 @@
+body {
+    background-color: #fff6fb;
+}
+
+#mainSection {
+    /* min-height: 300px;*/
+}
+
+#contact {
+    height: 300px;
+    /* background-color: azure;*/
+}
+
+.headerFont {
+    font-family: 'pl';
+    font-size: 40px;
+}
+
+.pagebackground {
+    background: #fff6fb;
+}
+
+#topBar {
+    height: 70px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#intro {
+    background-color: #fff6fb;
+}
+
+.intro {
+    height: 300px;
+    background-color: #ffebf6;
+    background: red;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff6fb 10%, #ffebf6 50%, #fff6fb 10%);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff6fb, #ffebf6, #fff6fb);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff6fb 10%, #ffebf6 50%, #fff6fb 10%);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff6fb, #ffebf6, #fff6fb);
+    /* Standard syntax (must be last) */
+}
+
+#footer {
+    height: 70px;
+    background: #ffc0b6;
+    padding-top: 15px;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff9f8 10%, #ffc0b6);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff9f8, #ffc0b6);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff9f8 10%, #ffc0b6);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff9f8, #ffc0b6);
+    /* Standard syntax (must be last) */
+}
+
+@font-face {
+    font-family: pl;
+    src: url("../fonts/Playlist.otf") format("opentype");
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    padding: 0;
+    width: 20%;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+}

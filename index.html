@@ -6,93 +6,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
 <link rel="stylesheet" href="css/hover-min.css" />
-<style>
-    body {
-        background-color: #fff9f8;
-    }
-    
-    #mainSection {
-        /*        min-height: 300px;*/
-    }
-    
-    #contact {
-        height: 300px;
-        /*        background-color: azure;*/
-    }
-    
-    .headerFont {
-        font-family: 'pl';
-        font-size: 40px;
-    }
-    
-    #topBar {
-        height: 70px;
-        background: #ffc0b6;
-        /*        padding-top: 15px;*/
-        padding-left: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(#ffc0b6 10%, #fff9f8);
-        /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(#ffc0b6 10%, #fff9f8);
-        /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(#ffc0b6 10%, #fff9f8);
-        /* For Firefox 3.6 to 15 */
-        background: linear-gradient(#ffc0b6 10%, #fff9f8);
-        /* Standard syntax (must be last) */
-    }
-    
-    #intro {
-        height: 300px;
-        background-color: #ffe4e1;
-        background: red;
-        /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(#fff9f8 10%, #ffe4e1 50%, #fff9f8 10%);
-        /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(#fff9f8, #ffe4e1, #fff9f8);
-        /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(#fff9f8 10%, #ffe4e1 50%, #fff9f8 10%);
-        /* For Firefox 3.6 to 15 */
-        background: linear-gradient(#fff9f8, #ffe4e1, #fff9f8);
-        /* Standard syntax (must be last) */
-    }
-    
-    #footer {
-        height: 70px;
-        background: #ffc0b6;
-        padding-top: 15px;
-        /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(#fff9f8 10%, #ffc0b6);
-        /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(#fff9f8, #ffc0b6);
-        /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(#fff9f8 10%, #ffc0b6);
-        /* For Firefox 3.6 to 15 */
-        background: linear-gradient(#fff9f8, #ffc0b6);
-        /* Standard syntax (must be last) */
-    }
-    
-    @font-face {
-        font-family: pl;
-        src: url("fonts/Playlist.otf") format("opentype");
-    }
-    
-    hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid #ccc;
-        padding: 0;
-        width: 20%;
-    }
-    
-    .social {
-        width: 40px;
-        height: 40px;
-        padding: 2px;
-    }
-</style>
+<link rel="stylesheet" href="css/main.css" />
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         var jssor_1_options = {
@@ -154,16 +68,7 @@
     });
 </script>
 <style>
-/* jssor slider bullet navigator skin 05 css */
-    /*
-        .jssorb05 div           (normal)
-        .jssorb05 div:hover     (normal mouseover)
-        .jssorb05 .av           (active)
-        .jssorb05 .av:hover     (active mouseover)
-        .jssorb05 .dn           (mousedown)
-        */
-    
-    .jssorb05 {
+.jssorb05 {
         position: absolute;
     }
     
@@ -318,7 +223,7 @@ p {
             /*responsive code end*/
         });
     </script>
-    <div id="topBar">
+    <div id="topBar" class="pagebackground">
         <div class="headerFont" style="float:left">Urban Stems</div>
         <div style="width:50%;float:right;font-size:22px;padding-right:10px;">
             <div style="color:white;margin:5px;float:right;background:inherit" class="hvr-shutter-out-horizontal"><a href="#footer">Contact</a></div>
@@ -337,10 +242,11 @@ p {
                 <div> <img data-u="image" src="img/events.jpeg" /> </div>
                 <div> <img data-u="image" src="img/classy.jpg" /> </div>
                 <div> <img data-u="image" src="img/bunch2.jpg" /> </div>
+                <div> <img data-u="image" src="img/bunch3.jpg" /> </div>
             </div>
             <!-- Arrow Navigator --><span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span> <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span> </div>
     </div>
-    <div id="intro">
+    <div id="intro" class="intro">
         <div style="margin:auto;text-align:center">
             <h1 class="headerFont">About Urban Stems</h1>
             <hr>
@@ -350,33 +256,32 @@ p {
         </div>
     </div>
     <div id="home">
-        <div class="container-fluid" style="background-color: #fff9f8;">
+        <div class="container-fluid" class="pagebackground">
             <div class="row">
-                <div class="col-lg-12" style="background-color:white;   position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p01.jpg" style="width:100%">
+                <div class="col-lg-12" style="position: relative; padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p01.jpg" style="width:100%">
                     <div style="position: absolute;top: 10%; left:60%;">
                         <h2 class="headerFont">Flower arrangements</h2>
-                        <p style="padding-top:20px;padding-right:5px;width:90%">Enhancing the beauty of flowers with artistic arrangement is the art of flower arrangements. Flower arrangements are an important part of the ambiance on any occasion, weddings, birthdays, parties or any other events in life. </p>
-                    </div>
+                        <p style="padding-top:20px;padding-right:5px;width:90%">Enhancing the beauty of flowers with artistic arrangement is the art of flower arrangements. Flower arrangements are an important part of the ambiance on any occasion, weddings, birthdays, parties or any other events in life. </p> <a href="#">See more of our designs</a> </div>
                 </div>
-                <div class="col-lg-12" style="background-color:white;   position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p02.jpg" style="width:100%">
+                <div class="col-lg-12" style="position: relative; padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p02.jpg" style="width:100%">
                     <div style="position: absolute;top: 10%; left:10%;">
                         <h2 class="headerFont">Weddings</h2>
                         <p style="padding-top:20px;;width:30%"> Each bride has a vision for her wedding day. Our mission is to ensure that vision be perfectly manifested. Surround your guest in a floral wonderland with beautiful centerpieces and decorations by offering fresh or silk flowers to add something special for any celebration. We offer unique packages to match your personality and budget </p>
                     </div>
                 </div>
-                <div class="col-lg-12" style="background-color:white;   position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p03.jpg" style="width:100%">
+                <div class="col-lg-12" style="position: relative;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p03.jpg" style="width:100%">
                     <div style="position: absolute;top: 10%; left:10%;color:white">
                         <h2 class="headerFont">Parties and event flowers</h2>
                         <p style="padding-top:20px;width:30%"> We decorate great events and parties, large and small. We are renowned for our attention to detail, personal approach, can do attitude and calm manner </p>
                     </div>
                 </div>
-                <div class="col-lg-12" style="background-color:white;   position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p05.jpg" style="width:100%">
+                <div class="col-lg-12" style="position: relative; padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/products/p05.jpg" style="width:100%">
                     <div style="position: absolute;top: 10%; left:10%;color:#2a4411">
                         <h2 class="headerFont">Houseplants</h2>
                         <p style="padding-top:20px;;width:30%">Houseplants make a beautiful, and inexpensive, decorative accent, adding color and warmth to virtually any room in your home or apartment. Either you are an expert or a forgetful gardner you will love our collection of great indoor plants that will suite you.</p>
                     </div>
                 </div>
-                <div class="col-lg-8" style="background-color:white;position: relative; background-color: #fff9f8;padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/contact.jpg" style="width:100%;opacity:0.3">
+                <div class="col-lg-8" style="position: relative; padding-right:0;padding-left:0;padding-top:15px;padding-bottom:15px;"> <img src="img/contact.jpg" style="width:100%;opacity:0.3">
                     <div style="position: absolute;top: 20%; left:50%;">
                         <h2>Call us on our flower line &nbsp;<i>077 737 0010</i></h2>
                         <p style="padding-top:20px;width:100%;text-align:center">Visit us at 216C, Gall Road, Rathmalana </p>
