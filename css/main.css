@@ -11,6 +11,13 @@ body {
     /* background-color: azure;*/
 }
 
+.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    opacity: 0.5;
+}
+
 .headerFont {
     font-family: 'pl';
     font-size: 40px;
